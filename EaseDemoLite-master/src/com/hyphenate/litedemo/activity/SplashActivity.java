@@ -35,7 +35,10 @@ public class SplashActivity extends  Activity {
 		super.onStart();
 
 		new Thread(new Runnable() {
+
+
 			public void run() {
+				
 				if (EMClient.getInstance().isLoggedInBefore()) {
 					// ** 免登陆情况 加载所有本地群和会话
 					//不是必须的，不加sdk也会自动异步去加载(不会重复加载)；
